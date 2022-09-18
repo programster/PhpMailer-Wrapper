@@ -1,0 +1,36 @@
+<?php
+
+/* 
+ * This is a template settings file. Fill in the details before removing the .tmpl extension and 
+ * running the tests.
+ */
+
+define('SMTP_HOST', '');
+define('SMTP_USER', '');
+define('SMTP_PASSWORD', '');
+
+# Specify who the email address should be from.
+define('SMTP_FROM', new \Programster\Emailers\Contact("my-email@gmail.com", "My Name"));
+
+# Specify what the reply-to address should be.
+define('SMTP_REPLY_TO', new \Programster\Emailers\Contact("my-email@gmail.com", "noreply"));
+
+# Specifyin if using SSL or TLS. This should really be TLS.
+define('SMTP_TLS_OR_SSL', 'tls');
+
+# Specify the contacts that test emails should be addressed to.
+define('EMAIL_TO', new \Programster\Emailers\ContactCollection(
+    new \Programster\Emailers\Contact("my.email@gmail.com", "My Name"),
+));
+
+# Specify the contacts that test should be cc'd to
+define('EMAIL_CC', new \Programster\Emailers\ContactCollection(
+
+));
+
+# Specify the contacts that test should be bcc'd to
+define('EMAIL_BCC', new \Programster\Emailers\ContactCollection(
+
+));
+
+
