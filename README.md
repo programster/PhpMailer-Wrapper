@@ -19,8 +19,8 @@ address.
 
 use Programster\Emailers\Attachment;
 use Programster\Emailers\AttachmentCollection;
-use Programster\Emailers\Contact
-use Programster\Emailers\ContactCollection
+use Programster\Emailers\Contact;
+use Programster\Emailers\ContactCollection;
 use Programster\Emailers\PhpMailerEmailer;
 use Programster\Emailers\SecurityProtocol;
 
