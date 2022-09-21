@@ -1,6 +1,6 @@
 <?php
 
-namespace Programster\Emailers;
+namespace Programster\Phpmailer;
 
 class Contact
 {

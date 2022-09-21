@@ -20,12 +20,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Programster\\Emailers\\": "src"
+            "Programster\\Phpmailer\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Programster\\Emailers\\Testing\\": "testing"
+            "Programster\\Phpmailer\\Testing\\": "testing"
         }
     }
 }

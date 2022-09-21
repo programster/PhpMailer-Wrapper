@@ -17,12 +17,12 @@ address.
 ```php
 <?php
 
-use Programster\Emailers\Attachment;
-use Programster\Emailers\AttachmentCollection;
-use Programster\Emailers\Contact;
-use Programster\Emailers\ContactCollection;
-use Programster\Emailers\PhpMailerEmailer;
-use Programster\Emailers\SecurityProtocol;
+use Programster\Phpmailer\Attachment;
+use Programster\Phpmailer\AttachmentCollection;
+use Programster\Phpmailer\Contact;
+use Programster\Phpmailer\ContactCollection;
+use Programster\Phpmailer\PhpMailerEmailer;
+use Programster\Phpmailer\SecurityProtocol;
 
 require_once(__DIR__ . '/vendor/autoload.php');
 
@@ -32,7 +32,7 @@ $mailer = new PhpMailerEmailer(
     smtpUser: 'my.email@gmail.com', 
     smtpPassword: 'myPasswordGoesHere', 
     securityProtocol: SecurityProtocol::TLS,
-    from: new \Programster\Emailers\Contact('myEmail@gmail.com', 'My Name'),
+    from: new \Programster\Phpmailer\Contact('myEmail@gmail.com', 'My Name'),
     smtpPort: 587
 );
 

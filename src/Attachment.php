@@ -1,6 +1,6 @@
 <?php
 
-namespace Programster\Emailers;
+namespace Programster\Phpmailer;
 
 class Attachment
 {
@@ -35,6 +35,6 @@ class Attachment
             throw new ExceptionFileIsNotReadable($filepath);
         }
 
-        $this->name = $name ?? (string) static::mb_pathinfo($filepath, PATHINFO_BASENAME);
+        $this->name = $name ?? (string) pathinfo($filepath, PATHINFO_BASENAME);
     }
 }

@@ -6,7 +6,7 @@
  * super easily in future.
  */
 
-namespace Programster\Emailers;
+namespace Programster\Phpmailer;
 
 use PHPMailer\PHPMailer\PHPMailer;
 

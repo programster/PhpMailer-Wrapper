@@ -5,7 +5,7 @@
  * Using a custom exception, allows the developer to gracefully handle different erroneous situations at a higher level.
  */
 
-namespace Programster\Emailers;
+namespace Programster\Phpmailer;
 
 class ExceptionFileIsNotReadable extends \Exception
 {

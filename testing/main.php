@@ -1,9 +1,9 @@
 <?php
 
-use Programster\Emailers\Attachment;
-use Programster\Emailers\AttachmentCollection;
-use Programster\Emailers\PhpMailerEmailer;
-use Programster\Emailers\SecurityProtocol;
+use Programster\Phpmailer\Attachment;
+use Programster\Phpmailer\AttachmentCollection;
+use Programster\Phpmailer\PhpMailerEmailer;
+use Programster\Phpmailer\SecurityProtocol;
 
 require_once(__DIR__ . '/../vendor/autoload.php');
 require_once(__DIR__ . '/Settings.php');
