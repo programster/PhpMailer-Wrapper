@@ -63,7 +63,8 @@ class PhpMailerEmailer implements EmailerInterface
         ?ContactCollection $to,
         ?ContactCollection $cc = null,
         ?ContactCollection $bcc = null,
-        AttachmentCollection $attachments = null
+        AttachmentCollection $attachments = null,
+        EmbeddedImageCollection $images = null
     ) : void
     {
         $mailer = new PHPMailer();
@@ -137,6 +138,15 @@ class PhpMailerEmailer implements EmailerInterface
                     $attachment->encoding->value,
                     $attachment->mimetype ?? ''
                 );
+            }
+        }
+
+        if ($images !== null && count($images) > 0)
+        {
+            foreach ($images as $imagePath)
+            {
+                /* @var $imagePath EmbeddedImage */
+                $mailer->addEmbeddedImage($imagePath->filepath, $imagePath->cid);
             }
         }
 
