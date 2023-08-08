@@ -73,7 +73,12 @@ class PhpMailerEmailer implements EmailerInterface
         $mailer->SMTPAuth = true;
         $mailer->Username = $this->smtpUser;
         $mailer->Password = $this->smtpPassword;
-        $mailer->SMTPSecure = $this->securityProtocol->value;
+
+        if ($this->securityProtocol !== SecurityProtocol::NONE)
+        {
+            $mailer->SMTPSecure = $this->securityProtocol->value;
+        }
+
         $mailer->Port = $this->smtpPort;
         $mailer->setFrom($this->from->email, $this->from->name ?? '');
         $mailer->addReplyTo($this->replyTo->email, $this->replyTo->name ?? '');

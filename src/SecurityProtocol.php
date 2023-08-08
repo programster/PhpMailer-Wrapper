@@ -11,4 +11,5 @@ enum SecurityProtocol: string
 {
     case TLS = "tls";
     case SSL = "ssl";
+    case NONE = "none";
 }
